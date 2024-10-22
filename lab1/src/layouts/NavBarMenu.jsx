@@ -9,12 +9,12 @@ function NavBarMenu({items}) {
                 <ul className="navbar-nav d-flex list-unstyled">
                     {items.map(item => (
                         <li key={item.id} className="nav-item me-4">
-                            <Nav.Link href={item.url} key={item.id}>
+                            {/* <Nav.Link href={item.url} key={item.id}>
                                 {item.label}
-                            </Nav.Link>
-                            {/* <Link to={item.url} className="nav-link fs-5">
+                            </Nav.Link> */}
+                            <Link to={item.url} className="nav-link fs-5">
                                 {item.label}
-                            </Link> */}
+                            </Link>
                         </li>
                     ))}
                 </ul>

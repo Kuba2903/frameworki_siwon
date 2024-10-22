@@ -22,9 +22,10 @@ fs.readFile('./src/names.txt', 'utf8', (err, data) => {
         //losowanie imienia z bilioteki imion
         const randomIndex = Math.floor(Math.random() * names.length);
         const name = names[randomIndex].split(' ');
+        const rating = Math.floor(Math.random() * 10) + 1;
         
         // Dodanie obiektu z id i name do content
-        content += `{"id": ${i}, "name": "${name[0]}", "date_of_birth": "${name[1]}", "eyes": "${name[2]}"}, \n`;
+        content += `{"id": ${i}, "name": "${name[0]}", "date_of_birth": "${name[1]}", "eyes": "${name[2]}", "rating": "${rating}"}, \n`;
     }
     content += "];";
     content += "export default data;";
@@ -55,9 +56,10 @@ fs.readFile('./src/cars.txt', 'utf8', (err, data) => {
         //losowanie imienia z bilioteki imion
         const randomIndex = Math.floor(Math.random() * cars.length);
         const car = cars[randomIndex].split(' ');
+        const rating = Math.floor(Math.random() * 10) + 1;
 
         // Dodanie obiektu z id i name do content
-        content += `{"id": ${i}, "marka": "${car[0]}", "rejestracja": "${car[1]}" , "vin": "${car[2]}"} \n ${i < counter - 1 ? ', ' : ''}`;
+        content += `{"id": ${i}, "marka": "${car[0]}", "rejestracja": "${car[1]}" , "vin": "${car[2]}", "rating": "${rating}"} \n ${i < counter - 1 ? ', ' : ''}`;
     }
     content += "];";
     content += "export default data;";

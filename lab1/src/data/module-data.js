@@ -1,3 +1,3 @@
-const data = [{"id": 0, "name": "Karol", "date_of_birth": "2004-10-10", "eyes": "blue"}, 
-{"id": 1, "name": "Karol", "date_of_birth": "2004-10-10", "eyes": "blue"}, 
+const data = [{"id": 0, "name": "Karolina", "date_of_birth": "2003-10-10", "eyes": "green", "rating": "3"}, 
+{"id": 1, "name": "Karolina", "date_of_birth": "2003-10-10", "eyes": "green", "rating": "6"}, 
 ];export default data;
