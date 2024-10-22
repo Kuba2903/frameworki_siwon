@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import Bar from './RatingBar';
 
 function PersonProfile ({name, date_of_birth, eyes, rating}) {
 
     const [newRate,SetRate] = useState(rating);
     
     const [i, setI] = useState(0); 
+    
 
     const IncrementRate = () => {
         if (i === 0) {
@@ -14,7 +16,11 @@ function PersonProfile ({name, date_of_birth, eyes, rating}) {
             SetRate(0); 
             setI(i + 1); 
         } else {
-            SetRate(newRate + 1); 
+            SetRate(newRate + 1);
+
+            if(newRate == 10){
+                SetRate(0);
+            }
         }
     };
 
@@ -24,6 +30,7 @@ function PersonProfile ({name, date_of_birth, eyes, rating}) {
             <p>Data urodzenia: {date_of_birth}</p>
             <p>Kolor oczu: {eyes}</p>
             <p>Rating: {newRate}</p>
+            <Bar rate={newRate}/>
 
             <button onClick={Edit}>Edit</button>
             <button onClick={Delete}>Delete</button>
