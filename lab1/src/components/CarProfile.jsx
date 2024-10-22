@@ -11,4 +11,5 @@ function CarProfile({marka, rejestracja, vin}){
     );
 }
 
+
 export default CarProfile;

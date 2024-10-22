@@ -13,6 +13,7 @@ function Lab1(){
               name = {person.name}
               date_of_birth = {person.date_of_birth}
               eyes = {person.eyes}
+              rating={person.rating}
             />
         ))}
         </div>
